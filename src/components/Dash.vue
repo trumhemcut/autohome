@@ -156,6 +156,9 @@
         <ul class="sidebar-menu">
           <li class="header">TOOLS</li>
           <li class="active pageLink" v-on:click="toggleMenu"><router-link to="/"><i class="fa fa-desktop"></i><span class="page">Dashboard</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/temperature"><i class="fa fa-thermometer"></i><span class="page">Temperature & Humidity</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/camera"><i class="fa fa-video-camera"></i><span class="page">Camera</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/light"><i class="fa fa-lightbulb-o"></i><span class="page">Lights</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/tables"><i class="fa fa-table"></i><span class="page">Tables</span></router-link></li>
 
           <li class="header">ME</li>

@@ -12,7 +12,7 @@
 
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input class="form-control" name="username" placeholder="Username" type="text" v-model="username">
+                <input class="form-control" name="username" placeholder="Email" type="text" v-model="username">
               </div>
 
               <div class="input-group">

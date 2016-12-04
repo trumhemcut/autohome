@@ -10,6 +10,9 @@ import SettingView from './components/dash/Setting.vue'
 import AccessView from './components/dash/Access.vue'
 import ServerView from './components/dash/Server.vue'
 import ReposView from './components/dash/Repos.vue'
+import TemperatureView from './components/dash/Temperature.vue'
+import CameraView from './components/dash/Camera.vue'
+import LightView from './components/dash/Light.vue'
 
 // Routes
 const routes = [
@@ -56,6 +59,21 @@ const routes = [
         component: ReposView,
         name: 'Repository',
         description: 'List of popular javascript repos'
+      }, {
+        path: '/temperature',
+        component: TemperatureView,
+        name: 'Temperature',
+        description: 'View temperature & humidity of our home'
+      }, {
+        path: '/camera',
+        component: CameraView,
+        name: 'Camera',
+        description: 'View Cameras of our home'
+      }, {
+        path: '/light',
+        component: LightView,
+        name: 'Light',
+        description: 'View Lights of our home'
       }
     ]
   }, {
