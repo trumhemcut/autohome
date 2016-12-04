@@ -159,15 +159,15 @@
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/temperature"><i class="fa fa-thermometer"></i><span class="page">Temperature & Humidity</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/camera"><i class="fa fa-video-camera"></i><span class="page">Camera</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/light"><i class="fa fa-lightbulb-o"></i><span class="page">Lights</span></router-link></li>
-          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/tables"><i class="fa fa-table"></i><span class="page">Tables</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/server"><i class="fa fa-hdd-o"></i><span class="page">Server</span></router-link></li>
 
           <li class="header">ME</li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/tables"><i class="fa fa-table"></i><span class="page">Tables</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/tasks"><i class="fa fa-tasks"></i><span class="page">Tasks</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/setting"><i class="fa fa-cog"></i><span class="page">Settings</span></router-link></li>
 
           <li class="header">LOGS</li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/access"><i class="fa fa-book"></i><span class="page">Access</span></router-link></li>
-          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/server"><i class="fa fa-hdd-o"></i><span class="page">Server</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/repos"><i class="fa fa-heart"></i><span class="page">Repos</span><small class="label pull-right bg-green">AJAX</small></router-link></li>
 
           <li class="header">PAGES</li>

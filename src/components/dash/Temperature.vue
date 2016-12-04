@@ -21,7 +21,7 @@ export default {
   },
   mounted: function () {
     this.$nextTick(function () {
-      var tv = 5000
+      var tv = 2000
 
       // instantiate our graph!
       var graph = new Rickshaw.Graph({
@@ -38,36 +38,23 @@ export default {
 
       graph.render()
 
-      var pubnub = new PubNub({
+      let pubnub = new PubNub({
         subscribeKey: 'sub-c-434796fa-b9e7-11e6-8036-0619f8945a4f',
         publishKey: 'pub-c-038f9e11-fc17-4bf1-b2be-3946c20238fa',
         ssl: true
       })
 
-      var i = 0
-      setInterval(function () {
-        var data = { one: Math.floor(Math.random() * 40) + 120 }
-
-        var randInt = Math.floor(Math.random() * 100)
-        data.two = (Math.sin(i++ / 40) + 4) * (randInt + 400)
-        data.three = randInt + 300
-
-        pubnub.publish(
-          {
-            message: data,
-            channel: 'DHT'
-          },
-          function (status, response) {
-            console.log(response)
-          }
-        )
-      }, tv)
-
       pubnub.addListener({
         message: function (data) {
-          graph.series.addData(data.message)
+          let graphData = {
+            one: Math.floor(data.message.humidity),
+            two: Math.floor(data.message.temperature)
+          }
+
+          graph.series.addData(graphData)
           graph.render()
-          console.log('New Message!!', data)
+
+          console.log(graphData)
         },
         presence: function (presenceEvent) {
           // handle presence
